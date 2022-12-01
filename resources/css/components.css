@@ -1,0 +1,87 @@
+@layer components {
+
+    /**
+     * Control.
+     *
+     */
+    .control .field { @apply font-sans }
+    .control .field + .label { width: calc(100% - 19px); transition: all 0.1s ease, background-color 0s }
+    .control .field + .label.populated { @apply top-0 left-1 pt-10px pl-2 text-gray-600 text-12px pr-3 pb-5px }
+    .control .field + .label.populated i { @apply hidden }
+    .control .field + .label.populated .optional { @apply hidden }
+    .control .field + .label.unpopulated { @apply top-0 left-1 pt-18px pl-2 text-gray-600 text-16px pr-4 }
+    .control .field + .label.unpopulated.small { @apply left-0 pt-9px pl-1 text-gray-600 text-16px pr-4 }
+    .control .field.textarea + .label.populated { @apply bg-inherit }
+    .control .field.textarea + .label + .clear { @apply bg-transparent }
+
+    /**
+     * Date.
+     *
+     */
+    .date .pika-single { @apply shadow-none w-full -mt-1px rounded-b border border-gray-400/75 transition }
+    .date .pika-single { @apply duration-300 origin-top scale-100 opacity-100 pointer-events-auto }
+    .date .pika-single { @apply xl:absolute !important }
+    .date .pika-single.is-hidden { @apply scale-90 opacity-0 pointer-events-none }
+    .date .pika-single.is-hidden { @apply xl:block !important }
+    .date .pika-single .pika-label { @apply text-gray-700 }
+    .date .pika-single .pika-prev { @apply transition duration-300 h-25px top-2px opacity-30 hover:opacity-60 ; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgNTEyIj48cGF0aCBkPSJNMTkyIDEyNy4zMzh2MjU3LjMyNGMwIDE3LjgxOC0yMS41NDMgMjYuNzQxLTM0LjE0MiAxNC4xNDJMMjkuMTk2IDI3MC4xNDJjLTcuODEtNy44MS03LjgxLTIwLjQ3NCAwLTI4LjI4NGwxMjguNjYyLTEyOC42NjJjMTIuNTk5LTEyLjYgMzQuMTQyLTMuNjc2IDM0LjE0MiAxNC4xNDJ6Ii8+PC9zdmc+) }
+    .date .pika-single .pika-next { @apply transition duration-300 h-25px top-2px opacity-30 hover:opacity-60 ; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgNTEyIj48cGF0aCBkPSJNMCAzODQuNjYyVjEyNy4zMzhjMC0xNy44MTggMjEuNTQzLTI2Ljc0MSAzNC4xNDItMTQuMTQybDEyOC42NjIgMTI4LjY2MmM3LjgxIDcuODEgNy44MSAyMC40NzQgMCAyOC4yODRMMzQuMTQyIDM5OC44MDRDMjEuNTQzIDQxMS40MDQgMCA0MDIuNDggMCAzODQuNjYyeiIvPjwvc3ZnPg==) }
+    .date .pika-single .pika-lendar { @apply w-full m-0 p-2 }
+    .date .pika-single table { @apply mt-1 }
+    .date .pika-single table abbr { @apply no-underline }
+    .date .pika-single table .pika-button { @apply bg-white rounded transition duration-300 text-center text-gray-700 hover:bg-orange-200 hover:rounded hover:text-gray-700 }
+    .date .pika-single table .is-today .pika-button { @apply text-teal-600 bg-orange-100/70 }
+    .date .pika-single table .is-selected .pika-button { @apply shadow-none bg-green-200 font-normal }
+
+    /**
+     * News.
+     *
+     */
+    .news .HW_badge.HW_softHidden { @apply scale-50 bg-gray-600 }
+
+    /**
+     * Progress.
+     *
+     */
+    #nprogress .bar { height: 3px !important }
+    #nprogress .bar .peg { @apply shadow-none }
+
+    /**
+     * Tags.
+     *
+     */
+    .tags .tagify { @apply border-none }
+    .tags .tagify.tagify--focus + input + .optional { @apply hidden }
+    .tags .tagify .tagify__input { @apply relative top-10px left-6px }
+    .tags .tagify .tagify__input:before { @apply text-gray-600 top-7px pl-[33px] }
+    .tags .tagify .tagify__input:after { @apply relative left-6px -top-19px text-gray-700/80 text-14px font-bold ; font-family: 'Font Awesome 6 Free'; content: '\f02c' }
+    .tags .tagify .tagify__tag { @apply bg-sky-600/10 hover:bg-sky-600/10 rounded px-1 m-5px top-6px left-6px }
+    .tags .tagify .tagify__tag div:before { @apply shadow-none }
+    .tags .tagify .tagify__tag:hover div:before { @apply shadow-none }
+    .tags .tagify .tagify__tag .tagify__tag__removeBtn { @apply bg-transparent }
+    .tags .tagify .tagify__tag .tagify__tag__removeBtn:after { @apply text-gray-700 }
+    .tags .tagify .tagify__tag .tagify__tag__removeBtn:hover { @apply bg-transparent }
+    .tags .tagify .tagify__tag .tagify__tag__removeBtn:hover:after { @apply text-red-700 }
+    .tags .tagify .tagify__tag .tagify__tag__removeBtn:hover + div:before { box-shadow: 0 0 #0000 !important }
+    .tags .tagify .tagify__tag .tagify__tag__removeBtn:hover + div > span.tagify__tag-text { @apply opacity-100 }
+    .tags .tagify .tagify__tag .tagify__tag-text { @apply relative top-1px overflow-visible }
+    .tags .tagify .tagify__tag + .tagify__input { @apply relative top-6px left-6px }
+    .tags .tagify .tagify__tag + .tagify__input:before { @apply hidden }
+    .tags .tagify .tagify__tag + .tagify__input:after { @apply hidden }
+    .tags .tagify.tagify--focus .tagify__input:before { @apply hidden }
+    .tags .tagify.tagify--focus .tagify__input:after { @apply hidden }
+    .tags .optional { @apply top-1px }
+
+    /**
+     * Textbox.
+     *
+     */
+    .textbox textarea::placeholder { @apply text-gray-600 }
+
+    /**
+     * Writer.
+     *
+     */
+    .writer .textbox .field.textarea { @apply font-mono text-17px leading-gentle }
+
+}

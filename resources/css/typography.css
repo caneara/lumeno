@@ -1,0 +1,42 @@
+@layer base {
+
+    /**
+     * Proxima Vara.
+     *
+     */
+    @font-face {
+        font-family: 'Proxima Vara';
+        font-style: normal;
+        font-weight: 100 900;
+        font-variant-numeric: proportional-nums;
+        src: url('/fonts/ProximaVara.woff2') format('woff2')
+    }
+
+    /**
+     * Inter.
+     *
+     */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100 900;
+        font-variant-numeric: proportional-nums;
+        src: url('/fonts/Inter.woff2') format('woff2')
+    }
+
+    /**
+     * Typography.
+     *
+     */
+    h1 { @apply font-inter tracking-tight leading-tight font-almostbold text-gray-900 text-[36px] mb-10 }
+    h2 { @apply font-inter tracking-tight leading-tight font-almostbold text-gray-900 text-33px mb-9 }
+    h3 { @apply font-inter tracking-tight leading-tight font-almostbold text-gray-900 text-27px mb-8 }
+    h4 { @apply font-inter tracking-tight leading-tight font-almostbold text-gray-900 text-21px mb-5 }
+    h5 { @apply font-inter tracking-tight leading-tight font-almostbold text-gray-900 text-19px mb-4 }
+    h6 { @apply font-sans tracking-tight leading-tight font-semibold text-sky-800 text-17px mb-4 }
+    p { @apply text-gray-700 leading-normal text-16px mb-6 }
+    a { @apply no-underline text-sky-600 hover:text-rose-700 transition duration-300 }
+    pre { @apply font-sans text-gray-700 leading-normal text-16px mb-7 }
+    span { @apply leading-none }
+
+}

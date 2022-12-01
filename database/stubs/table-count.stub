@@ -1,0 +1,8 @@
+UPDATE
+    `metrics`
+SET
+    `value` = `value` {OPERATOR} 1
+WHERE
+    `table` = '{TABLE}'
+AND
+    `name` = '{NAME}';

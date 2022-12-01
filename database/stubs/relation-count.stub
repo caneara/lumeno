@@ -1,0 +1,10 @@
+UPDATE
+    `{TABLE}`
+SET
+    `metrics` = JSON_SET(
+        `metrics`,
+        '$.{NAME}_count',
+        GREATEST(0, COALESCE(JSON_VALUE(`metrics`, '$.{NAME}_count' RETURNING SIGNED), 0) {OPERATOR} 1)
+    )
+WHERE
+    `id` = {ROW}.`{ID}` {AND};

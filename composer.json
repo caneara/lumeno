@@ -1,0 +1,59 @@
+{
+    "name": "caneara/lumeno",
+    "require": {
+        "php": "^8.0",
+        "bugsnag/bugsnag-laravel": "^2.0",
+        "doctrine/dbal": "^3.0",
+        "fakerphp/faker": "^1.0",
+        "funkjedi/composer-include-files": "^1.0",
+        "inertiajs/inertia-laravel": "^0.5.4",
+        "intervention/image": "^2.0",
+        "itsgoingd/clockwork": "^5.0",
+        "laravel/framework": "^9.0",
+        "laravel/tinker": "^2.0",
+        "laravel/vapor-core": "^2.21",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "mattkingshott/triggers": "^1.0",
+        "predis/predis": "^1.0",
+        "propaganistas/laravel-phone": "^4.0",
+        "staudenmeir/laravel-adjacency-list": "^1.10",
+        "tightenco/ziggy": "^1.0"
+    },
+    "require-dev": {
+        "spatie/laravel-ignition": "^1.0",
+        "laravel/dusk": "^6.0",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    },
+    "extra": {
+        "include_files": [
+            "app/Support/Helpers.php"
+        ]
+    }
+}

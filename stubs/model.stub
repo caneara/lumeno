@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Types\Model;
+use App\Concerns\Shared\InteractsWithUuid;
+use App\Concerns\{{ class }}\InteractsWithRelations;
+
+class {{ class }} extends Model
+{
+    use InteractsWithUuid,
+        InteractsWithRelations;
+
+    /**
+     * The attributes that should be cast to specific types.
+     *
+     */
+    protected $casts = [
+        'id' => 'string',
+    ];
+}

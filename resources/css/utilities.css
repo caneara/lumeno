@@ -1,0 +1,17 @@
+@layer utilities {
+
+    .bg-white-important { background: #FFFFFF !important }
+    .clamp { @apply overflow-hidden leading-normal relative top-1px; display: -webkit-box; -webkit-box-orient: vertical }
+    .clamp.one-line { -webkit-line-clamp: 1 }
+    .clamp.two-lines { -webkit-line-clamp: 2 }
+    .clamp.three-lines { -webkit-line-clamp: 3 }
+    .clamp.clamp-none { @apply overflow-visible static; display: inline; -webkit-box-orient: unset; -webkit-line-clamp: unset; line-height: 1 }
+    .hide-when-empty:empty { @apply hidden }
+    .fa-fw { width: 31px; min-width: 31px; max-width: 31px }
+    .fa-spin { animation-duration: 2.75s }
+    .fill-none { fill: none }
+    .flex-expand { flex : 0 0 100% }
+    .grid-cols-shrink { grid-template-columns: min-content auto }
+    .text-shadow { text-shadow: 0 1px 3px #0000001A, 0 1px 2px #0000000F }
+
+}

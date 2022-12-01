@@ -1,0 +1,32 @@
+@layer base {
+
+    /**
+     * Home page.
+     *
+     */
+    .HomePage footer { @apply bg-sky-1000/0 border-none }
+    .HomePage .markdown .hljs { @apply overflow-x-hidden }
+
+    /**
+     * Employer page.
+     *
+     */
+    .EmployerPage footer { @apply bg-sky-1000/0 border-none }
+
+    /**
+     * Guide page.
+     *
+     */
+    .GuidePage section .container { @apply h-auto }
+    .GuidePage .bg-sidebar { background-image: linear-gradient(to right, #FFFFFF, #f9fbff) }
+
+    /**
+     * Article page.
+     *
+     */
+    .ArticlePage .zen .markdown p { @apply font-enhanced text-17px text-gray-800/80 leading-relaxed }
+    .ArticlePage .zen .markdown li { @apply font-enhanced text-17px text-gray-800/80 leading-relaxed }
+    .ArticlePage .zen .markdown ul li code { @apply text-15px }
+    .ArticlePage .zen .markdown p + blockquote { @apply mt-8 }
+
+}

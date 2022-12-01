@@ -1,0 +1,160 @@
+@layer components {
+
+    /**
+     * Headings.
+     *
+     */
+    .markdown h1 { @apply text-30px mb-10 }
+    .markdown h2 { @apply text-21px tracking-slight mb-6 }
+    .markdown h3 { @apply text-18px tracking-slight font-medium mb-5 }
+    .markdown h4 { @apply text-17px tracking-slight font-medium mb-4 }
+    .markdown h5 { @apply text-16px tracking-slight font-medium mb-3 }
+    .markdown h6 { @apply text-15px tracking-slight font-medium mb-3 }
+
+    /**
+     * Typography.
+     *
+     */
+    .markdown p { @apply leading-normal mb-5 }
+    .markdown p + h1 { @apply mt-10 }
+    .markdown p + h2 { @apply mt-10 }
+    .markdown p + h3 { @apply mt-10 }
+    .markdown p + h4 { @apply mt-10 }
+    .markdown p + h5 { @apply mt-10 }
+    .markdown p + h6 { @apply mt-10 }
+    .markdown p code { @apply bg-gray-300/80 font-mono text-14px rounded px-1 py-2px mx-1 }
+
+    /**
+     * Lists.
+     *
+     */
+    .markdown ol { @apply pl-11 list-decimal }
+    .markdown ol li { @apply text-gray-700 leading-normal mb-2 text-16px first-of-type:mt-5 last-of-type:mb-6 }
+    .markdown ul { @apply pl-11 list-none }
+    .markdown ul li { @apply text-gray-700 leading-normal mb-2 text-16px last-of-type:mb-9 }
+    .markdown ul li::before { @apply text-14px text-teal-600 font-medium inline-block relative -ml-3 -left-14px ; content: "\2731" }
+    .markdown ul li a { @apply text-sky-600 hover:text-rose-700 }
+    .markdown ul li code { @apply bg-gray-300/80 font-mono text-14px rounded px-1 py-2px mx-1 }
+    .markdown ul + p { @apply -mt-3 }
+    .markdown ul + h1 { @apply mt-10 }
+    .markdown ul + h2 { @apply mt-10 }
+    .markdown ul + h3 { @apply mt-10 }
+    .markdown ul + h4 { @apply mt-10 }
+    .markdown ul + h5 { @apply mt-10 }
+    .markdown ul + h6 { @apply mt-10 }
+
+    /**
+     * Miscellaneous.
+     *
+     */
+    .markdown hr { @apply w-1/2 border-dashed border-gray-400 mx-auto my-12 md:my-16 }
+    .markdown strong { @apply text-pink-700 font-semibold }
+    .markdown pre + p { @apply mt-8 }
+    .markdown pre + h1 { @apply mt-12 }
+    .markdown pre + h2 { @apply mt-12 }
+    .markdown pre + h3 { @apply mt-12 }
+    .markdown pre + h4 { @apply mt-12 }
+    .markdown pre + h5 { @apply mt-12 }
+    .markdown pre + h6 { @apply mt-12 }
+
+    /**
+     * Table.
+     *
+     */
+    .markdown table:not(.code-block) { @apply my-8 w-full border-separate border-spacing-0 }
+    .markdown table:not(.code-block) strong { @apply font-sans inline mt-0 text-black text-16px tracking-normal }
+    .markdown table:not(.code-block) thead { @apply relative p-0 h-auto w-auto overflow-auto }
+    .markdown table:not(.code-block) thead th { @apply table-cell align-middle text-13px font-semibold uppercase text-gray-700 }
+    .markdown table:not(.code-block) thead th { @apply whitespace-nowrap px-4 pt-17px pb-15px bg-teal-600/5 text-left first-of-type:rounded-tl last-of-type:rounded-tr border border-b-gray-400/70 border-l-0 border-r-0 border-t-gray-400 first-of-type:border-l first-of-type:border-l-gray-400 last-of-type:border-r last-of-type:border-r-gray-400 }
+    .markdown table:not(.code-block) tr td { @apply align-middle text-15px text-gray-700 p-4 table-cell bg-white border border-t-0 border-l-0 border-r-0 border-b-gray-300/80 first-of-type:border-l first-of-type:border-l-gray-400 last-of-type:border-r last-of-type:border-r-gray-400 transition duration-300 }
+    .markdown table:not(.code-block) tr:nth-child(odd) td { @apply bg-white }
+    .markdown table:not(.code-block) tr:nth-child(even) td { @apply bg-sky-50/70 }
+    .markdown table:not(.code-block) tr:hover td { @apply bg-orange-100/25 }
+    .markdown table:not(.code-block) tr:last-of-type td { @apply border-b-gray-400 first-of-type:rounded-bl last-of-type:rounded-br }
+    .markdown table:not(.code-block) + h1 { @apply mt-16 }
+    .markdown table:not(.code-block) + h2 { @apply mt-16 }
+    .markdown table:not(.code-block) + h3 { @apply mt-16 }
+    .markdown table:not(.code-block) + h4 { @apply mt-16 }
+    .markdown table:not(.code-block) + h5 { @apply mt-16 }
+    .markdown table:not(.code-block) + h6 { @apply mt-16 }
+
+    /**
+     * Block quote.
+     *
+     */
+    .markdown blockquote { @apply my-6 border-l-3 rounded-r px-6 py-5 bg-orange-100/55 border-yellow-600/45 }
+    .markdown blockquote p { @apply mb-0 }
+    .markdown blockquote + h1 { @apply mt-12 }
+    .markdown blockquote + h2 { @apply mt-12 }
+    .markdown blockquote + h3 { @apply mt-12 }
+    .markdown blockquote + h4 { @apply mt-12 }
+    .markdown blockquote + h5 { @apply mt-12 }
+    .markdown blockquote + h6 { @apply mt-12 }
+
+    /**
+     * Code block.
+     *
+     */
+    .markdown .hljs { @apply rounded border border-gray-300 bg-white overflow-x-auto text-15px mt-8 }
+    .markdown .hljs .code-block { @apply w-full table-fixed bg-gray-100/25 }
+    .markdown .hljs .code-block .line-number { @apply bg-gray-200/60 text-gray-500 w-50px text-center select-none }
+    .markdown .hljs .code-block .code-line { @apply pl-14px opacity-80 text-gray-700 }
+    .markdown .hljs .code-block .code-line .hljs-comment { @apply text-gray-700 }
+    .markdown .hljs .code-block tr:first-of-type .line-number { @apply pt-2 }
+    .markdown .hljs .code-block tr:first-of-type .code-line { @apply pt-2 }
+    .markdown .hljs .code-block tr:last-of-type .line-number { @apply pb-2 }
+    .markdown .hljs .code-block tr:last-of-type .code-line { @apply pb-2 }
+
+    /**
+     * Sidebar.
+     *
+     */
+    .markdown .sidebar h1 { @apply text-12px text-gray-500 uppercase font-semibold tracking-normal font-sans mb-4 }
+    .markdown .sidebar ul { @apply list-none pl-4 }
+    .markdown .sidebar ul + h1 { @apply mt-10 }
+    .markdown .sidebar ul li { @apply font-sans mb-1 }
+    .markdown .sidebar ul li:before { @apply hidden }
+    .markdown .sidebar ul li a { @apply text-15px text-gray-700/80 hover:text-rose-700 transition duration-300 }
+    .markdown .sidebar ul li.active a { @apply font-semibold text-sky-600 }
+
+    /**
+     * Table of Contents.
+     *
+     */
+    .markdown .toc { @apply list-none pl-0 mb-14 }
+    .markdown .toc ul { @apply pl-7 }
+    .markdown .toc li { @apply mb-6px last-of-type:mb-6px }
+    .markdown .toc li:before { @apply hidden }
+    .markdown .toc li a { @apply block my-6px font-semibold text-gray-700 hover:text-rose-700 }
+    .markdown .toc li a:before { @apply text-rose-700/50 font-semibold pr-1 ; content: '# ' }
+    .markdown .toc li ul { @apply list-none }
+    .markdown .toc li ul li a { @apply font-normal }
+    .markdown .toc li ul li ul li a:before { @apply text-sky-700/50 font-semibold pr-1 ; content: '# ' }
+
+
+    /**
+     * Navigation.
+     *
+     */
+    .markdown .navigation { @apply flex justify-between mt-16 }
+    .markdown .navigation a { @apply text-12px uppercase relative }
+    .markdown .navigation span { @apply invisible pointer-events-none }
+    .markdown .navigation .previous:before { @apply text-sky-700/50 font-semibold pr-2 ; content: '←' }
+    .markdown .navigation .next:after { @apply text-sky-700/50 font-semibold pl-2 ; content: '→' }
+
+    /**
+     * Premium.
+     *
+     */
+    .markdown .premium { @apply bg-amber-100 mt-8 mb-16 px-6 py-4 rounded-lg flex items-center text-amber-800/80 font-medium }
+    .markdown .premium i { @apply text-amber-700/50 relative top-1px text-35px mr-5 }
+
+    /**
+     * Video.
+     *
+     */
+    .markdown .video { @apply bg-sky-100 mt-8 mb-16 px-6 pt-3 pb-13px rounded-lg flex items-center text-sky-700/90 font-medium }
+    .markdown .video i { @apply text-sky-700/50 relative top-1px text-35px mr-5 }
+    .markdown .video a { @apply text-rose-800 hover:underline }
+
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true"
+         bootstrap="vendor/autoload.php"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./app</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Integration">
+            <directory suffix="Test.php">./tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_DEBUG" value="true"/>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_URL" value="http://lumeno.test"/>
+        <env name="ARGON_MEMORY" value="1024"/>
+        <env name="ARGON_TIME" value="1"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="DB_DATABASE" value="testing"/>
+        <env name="DB_USERNAME" value="root"/>
+        <env name="LOG_STACK" value="single"/>
+        <env name="MAIL_MAILER" value="array"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="ARGON_MEMORY" value="1024"/>
+        <env name="ARGON_THREADS" value="2"/>
+        <env name="ARGON_TIME" value="2"/>
+    </php>
+</phpunit>

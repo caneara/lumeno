@@ -1,0 +1,15 @@
+@layer base {
+
+    /**
+     * Reset.
+     *
+     */
+    body { margin-bottom: 0 !important; font-variant-numeric: proportional-nums }
+    svg { @apply fill-current }
+    input::placeholder { @apply pt-2px }
+    div, button, input, textarea, select { @apply outline-none focus:outline-none active:outline-none ; ; font-variant-numeric: proportional-nums }
+    input:-webkit-autofill { animation-name: autofill; animation-fill-mode: both; transition-delay: 99999s }
+    input:-webkit-autofill + label { @apply bg-transparent }
+    input:-webkit-autofill + label + .clear { @apply bg-transparent }
+
+}
